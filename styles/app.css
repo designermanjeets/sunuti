@@ -1,0 +1,108 @@
+body { font-size: 14px; }
+.wrapper { background: url('../img/SUNUTI-Homepage-House-For-Rent-And-Sale-3.jpg') no-repeat center top; background-size: 100% 100%; }
+/* Header */
+header {
+    background: rgba(0,0,0,1);
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+    padding: 10px 45px;
+    }
+.navbar-brand { background: url('../img/SUNUTI-White-logo.png') no-repeat center top; width: 150px; height: 36px; background-size: contain; }
+.navbar-expand-lg .navbar-nav .nav-link{ color: #fff; font-size: 14px; font-family: "Lato"; padding-left: 19px; padding-right: 19px; text-transform: uppercase; }
+.navbar-expand-lg .navbar-nav .nav-link:hover { color: #000; }
+.navbar-expand-lg.fixed-top { top: 15px; left: 28px; right: 45px; }
+.header-sticky { background: #fff; position: fixed; width: 100%; left: 0; top:0; height: 70px; z-index: 9;; }
+.header-sticky .navbar-nav .nav-link { color: #000; }
+.header-sticky .navbar-expand-lg.fixed-top { top: 6px; }
+.header-sticky .navbar-brand { background: url('../img/SUNUTI-Black-logo.png') no-repeat center top; width: 150px; height: 36px; background-size: contain;  }
+
+/* Banner */
+.banner { padding: 130px 0 150px; }
+.adv6-holder { padding: 13px 0 0; font-size: 13px; }
+.searchForm .form-group { width: 100%; }
+.searchForm .btn { text-transform: uppercase;
+    line-height: 1em;
+    font-weight: 600;
+    letter-spacing: .5px;font-size: 13px;padding: 11px 26px 12px; 
+}
+.searchForm .form-control { 
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px; height: calc(2em + .75rem + 2px); 
+}
+
+/* Property for Sale */
+.propsale { background: rgb(246, 246, 246); padding: 40px 0; margin-top: 15px; }
+.salelist { list-style-type: none; padding: 0; padding-left: 22px; }
+.salelist li { display: inline-block; }
+.propsale .card-body .btn { font-size: 12px; border: 1px solid #eee; background: #fff; padding: .3rem .55rem; }
+.propsale .card-body .svg-inline--fa { opacity: .4; color: #111; }
+.propsale .card-body .fa-heart { margin-right: 6px; }
+.propsale .card-body .btn:hover .svg-inline--fa  { color: #1ca8dd; opacity: 1; }
+.propsale .cardminbody { min-height: 225px; }
+.propionfos {
+    background-image: url('../img/unit.png');
+    font-size: 14px;
+    line-height: 30px;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    padding-left: 20px;
+    font-size: 13px;
+}
+.infosize { 
+    background-position: -127px 0; margin-right: 5px; padding-left: 20px;
+}
+.inforoom {
+    background-position: 0 -1px; margin-right: 10px; padding-left: 23px;
+}
+.infobath {
+    background-position: -63px -1px; margin-right: 10px; padding-left: 18px;
+}
+
+
+
+
+
+
+
+
+
+/* Bootstrap Override */
+.btn { border-radius: 0; }
+.form-control { border-radius: 2px; }
+.btn-dark {
+    color: #fff;
+    background-color: #202020!important;
+    border-color: #202020!important;
+}
+h1, h2 {font-family: "Raleway";color: #3a4659;font-weight: normal;}
+.open-sans { font-family: 'Open Sans'; }
+
+
+
+
+/* Media Queries */
+@media only screen and (max-width: 1599px) and (min-width: 1100px)
+{
+    .adv6-holder {
+        width: 550px!important;
+        min-height: 370px;
+        margin-left: 15px;
+    }
+}
+@media only screen and (min-width: 992px)
+{
+    .adv6-holder {
+        background: #fff!important;
+        border-radius: 4px!important;
+        padding-left: 28px!important;
+        padding-right: 28px!important;
+        padding-top: 32px!important;
+        box-shadow: 0 16px 40px rgba(0,0,0,.12)!important;
+    }
+}
