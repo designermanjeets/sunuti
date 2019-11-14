@@ -26,17 +26,19 @@
 <body>
     <section class="wrapper">
         <!-- Header -->
-        <header class="header header-sticky">
-            <nav class="navbar fixed-top navbar-expand-lg">
+        <header class="header">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
                 </button>
+
+                <div class="cogs"> <i class="fas fa-cogs"></i> </div>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">For Sale <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
@@ -70,8 +72,9 @@
         <!-- ./Header -->
         <!-- Banner -->
         <section class="banner container">
-            <section class="adv6-holder">
-                <h4 class="card-title text-center">Get Market Insights, Find Your Dream Home</h4>
+            <h5 class="headxs text-normal">Get Market Insights, Find Your Dream Home</h5>
+            <section class="adv6-holder col-lg-6 col-sm-8">
+                <h4 class="card-title text-center pt-3 pb-1">Get Market Insights, Find Your Dream Home</h4>
                 <form class="searchForm">
                     <div class="form-row">
                         <div class="form-group col-md-12">
@@ -110,26 +113,80 @@
                             </select>
                         </div>
                     </div>
-                    <p class="text-center"><button type="submit" class="btn btn-dark">Search Properties</button></p>
+                    <p class="text-center pt-3"><button type="submit" class="btn btn-dark">Search Properties</button></p>
                 </form>
                 <p>More Search Options</p>
             </section>
         </section>
         <!-- ./Banner -->
     </section>
+    <!-- Small Banner -->
+    
+    <section class="adv6-holder adv6-holderxs">
+            <form class="searchForm">
+                <div class="form-row">
+                    <div class="form-group ">
+                        <select class="form-control">
+                            <option selected>All Locations</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>All Areas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Property Type</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Min Bedrooms</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Max Bedrooms</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Min Price (€)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Max Price (€)</option>
+                        </select>
+                    </div>
+                </div>
+                <p>More Search Options</p>
+                <p class="text-center"><button type="submit" class="btn btn-dark btn-block">Search Properties</button></p>
+            </form>
+        </section>
+    <!-- ./Small Banner -->
     <!-- Property for Sale -->
     <section class="propsale">
         <section class="container">
             <div class="row">
-                <section class="col-sm-6 offset-sm-3">
+                <section class="col-lg-6 offset-lg-3">
                     <h2 class="text-transform text-center">PROPERTY FOR SALE IN SPAIN</h2>
                     <p class="text-center open-sans">Looking for your new home in Spain? Our unique search facility will help you to find the right <strong> houses, villas, apartments or Land for sale</strong> in your desired areas.</p>
                 </section>
             </div>
             <div class="row pt-4">
-                <div class="col-md-3">
+                <div class="col-xl-3 col-sm-6 col-xs-12">
                     <div class="card">
-                        <img src="img/DSCN2422-525x328.jpg" class="card-img-top" alt="">
+                        <div class="img-wrap">
+                            <img src="img/DSCN2422-525x328.jpg" class="card-img-top" alt="">
+                            <div class="property_media"><i class="fas fa-camera"></i> 21</div>
+                            <div class="property_location_image">
+                                <span class="property_marker"></span>
+                                <a href="#" rel="tag" target="_blank">Los Alcázares</a>,
+                                <a href="#" rel="tag" target="_blank">Murcia</a>
+                            </div>
+                        </div>
                         <div class="card-body cardminbody">
                             <h6 class="card-title">Cottage (80sqm) For Sale in Selva Mallorca For €185,000</h6>
                             <p class="card-text">Cottage in Selva Mallorca For Sale – Plot of 3500m2 with cottage of 80m2, 1 bedroom,1 bathroom, a kitchen and a living room, and a garage that can be used as an extra room.</p>
@@ -144,9 +201,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-sm-6 col-xs-12">
                     <div class="card">
-                        <img src="img/Townhouse-For-Sale-in-Alcudia-Mallorca-1-525x328.jpg" class="card-img-top" alt="">
+                        <div class="img-wrap"><img src="img/Townhouse-For-Sale-in-Alcudia-Mallorca-1-525x328.jpg" class="card-img-top" alt=""></div>
                         <div class="card-body cardminbody">
                             <h6 class="card-title">3 Bedroom Townhouse (230sqm) For Sale in Alcudia Mallorca For €950,000</h6>
                             <p class="card-text">Historic house for sale in Alcudia, Mallorca.</p>
@@ -163,9 +220,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-sm-6 col-xs-12">
                     <div class="card">
-                        <img src="img/Finca-en-Sencelles-3-1-525x328.jpg" class="card-img-top" alt="">
+                        <div class="img-wrap"><img src="img/Finca-en-Sencelles-3-1-525x328.jpg" class="card-img-top" alt=""></div>
                         <div class="card-body cardminbody">
                             <h6 class="card-title">2 Bedroom Villa (91sqm) For Sale in Sencelles Mallorca For €530,000</h6>
                             <p class="card-text">Great plot for sale in Sencelles, Mallorca.</p>
@@ -182,9 +239,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-sm-6 col-xs-12">
                     <div class="card">
-                        <img src="img/310909-73c9baa2-525x328.jpg" class="card-img-top" alt="">
+                        <div class="img-wrap"><img src="img/310909-73c9baa2-525x328.jpg" class="card-img-top" alt=""></div>
                         <div class="card-body cardminbody">
                             <h6 class="card-title">Office (185sqm) For Sale in Llucmajor Mallorca For €348,000</h6>
                             <p class="card-text">This office is at Carrer de Santa Margalida, 07609, Llucmajor, Islas Baleares, is in the district of Sa Torre, on floor 1.</p>
@@ -204,6 +261,112 @@
         </section>
     </section>
     <!-- ./Property for Sale -->
+    <!-- Explore Property -->
+    <section class="explorepropty p-5">
+        <section class="container">
+            <p class="text-center"><button type="button" class="btn btn-light btn-white"><i class="fas fa-globe-asia"></i>Explore Property For Sale in Spain</button></p>
+            <section class="row pt-5">
+                <section class="col-md-6">
+                    <div class="card text-center border-0">
+                        <div class="card-body pt-0">
+                            <h5 class="card-title text-uppercase text-normal">A PROPERTY PORTAL SPECIALISING IN HOMES FOR SALE IN SPAIN</h5>
+                            <span class="vc_sep_holder vc_sep_color_grey"><span class="vc_sep_line"></span></span>
+                            <p class="pt-2">Sunuti is a technology-driven real estate platform focusing on the worldwide holiday and second home markets.</p>
+                            <h6 class="card-text">Here’s what you should expect from us…</h6>
+                            <button type="button" class="btn btn-light btn-white text-uppercase mt-5">Watch the video</button>
+                            <span class="vc_sep_holder vc_sep_color_grey"><span class="vc_sep_line"></span></span>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-md-6">
+                    <iframe width="100%" height="90%" style="border:0;" src="https://www.youtube.com/embed/tYw2NX1Iid0?feature=oembed"> </iframe>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- ./Explore Property -->
+    <!-- Search Guides -->
+    <section class="searchGuides">
+        <section class="container">
+            <div class="row">
+                <section class="col-sm-6 offset-sm-3">
+                    <h5 class="text-transform text-center text-normal">PROPERTY SEARCH GUIDES</h5>
+                    <span class="vc_sep_holder vc_sep_color_grey"><span class="vc_sep_line"></span></span>
+                    <p class="text-center open-sans font16">Read our city guides to learn about the most desirable places to live and <a class="anchrblue" href="#">buy a property</a> in <strong> Mallorca, Ibiza or Alicante</strong>.</p>
+                </section>
+            </div>
+            <div class="row pt-3 pb-5 narrowpadd">
+                <div class="col-md-4 citycol">
+                    <div class="img-holder">
+                        <img class="img-fluid" src="img/Property-For-Sale-Palma-de-Mallorca.jpg" alt="">
+                        <p class="cityname">MALLORCA</p>
+                    </div>
+                </div>
+                <div class="col-md-4 citycol">
+                    <div class="img-holder">
+                        <img class="img-fluid" src="img/Ibiza-Property-For-Sale.jpg" alt="">
+                        <p class="cityname">IBIZA</p>
+                    </div>
+                </div>
+                <div class="col-md-4 citycol">
+                    <div class="img-holder">
+                        <img class="img-fluid" src="img/Property-Search-For-Sale-in-Benidorm.jpg" alt="">
+                        <p class="cityname">ALICANTE</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- ./Search Guides -->
+    <!-- Footer -->
+    <footer class="foo">
+        <section class="container pt-5">
+            <section class="row">
+                <div class="col-lg-6 col-xs-12">
+                    <img class="foo-logo" src="img/SUNUTI-Black-logo.png" alt="">
+                    <p class="font13 pt-3">At Sunuti we are committed to bringing you the best and most recent properties to buy and rent, we use our market expertise to offer a unique search function allowing you to be very specific and narrow down only what is interesting to you.</p>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <ul class="foolist">
+                        <li><h6>COMPANY</h6></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Rent</a></li>
+                        <li><a href="#">Holiday Rental</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                    <ul class="foolist">
+                        <li><h6>EXPLORE</h6></li>
+                        <li><a href="#">Ibiza</a></li>
+                        <li><a href="#">Mallorca</a></li>
+                        <li><a href="#">Alicante</a></li>
+                    </ul>
+                    <ul class="foolist">
+                        <li><h6>CONTACT</h6></li>
+                        <li><a href="#"><i class="fas fa-phone-alt mr-3"></i>+442070169878</a></li>
+                        <li><a href="#"><i class="fas fa-desktop mr-3"></i>Contact Us</a></li>
+                        <li class="pt-4">
+                            <a href="#"><i class="fab fa-facebook-f mr-3"></i></a>
+                            <a href="#"><i class="fab fa-twitter mr-3"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section class="copyright mt-5">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-lg-6 col-sm-6 col-xs-6 text-left">Copyright 2019 | All Rights Reserved</div>
+                    <div class="col-lg-6 col-sm-6 col-xs-6 text-right">
+                        <a href="#" class="mr-4">Privacy Policy</a>
+                        <a href="#">Terms and Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- ./Footer -->
     <!-- End HTML -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="scripts/jquery-3.3.1.slim.min.js"></script>
@@ -214,16 +377,14 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
 
-            var stickyOffset = 100;
-
             $(window).scroll(function(){
-                var sticky = $('.header'),
-                scroll = $(window).scrollTop();
-
-                if (scroll >= stickyOffset) sticky.addClass('header-sticky');
-                else sticky.removeClass('header-sticky');
+                if($(window).width() > 992) {
+                    var sticky = $('.header'),
+                    scroll = $(window).scrollTop();
+                    if (scroll >= 100) sticky.addClass('header-sticky');
+                    else sticky.removeClass('header-sticky');
+                }   
             });
-
         });
     </script>
     <!--load all styles -->

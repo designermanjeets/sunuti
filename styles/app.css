@@ -10,99 +10,134 @@ header {
     background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
-    padding: 10px 45px;
+    padding: 10px 45px; min-height: 90px;
     }
+.header * {  transition: all 0.3s ease;  }
 .navbar-brand { background: url('../img/SUNUTI-White-logo.png') no-repeat center top; width: 150px; height: 36px; background-size: contain; }
 .navbar-expand-lg .navbar-nav .nav-link{ color: #fff; font-size: 14px; font-family: "Lato"; padding-left: 19px; padding-right: 19px; text-transform: uppercase; }
 .navbar-expand-lg .navbar-nav .nav-link:hover { color: #000; }
 .navbar-expand-lg.fixed-top { top: 15px; left: 28px; right: 45px; }
-.header-sticky { background: #fff; position: fixed; width: 100%; left: 0; top:0; height: 70px; z-index: 9;; }
+.header-sticky { background: #fff; position: fixed; width: 100%; left: 0; top:0; height: 70px; z-index: 99; }
 .header-sticky .navbar-nav .nav-link { color: #000; }
 .header-sticky .navbar-expand-lg.fixed-top { top: 6px; }
 .header-sticky .navbar-brand { background: url('../img/SUNUTI-Black-logo.png') no-repeat center top; width: 150px; height: 36px; background-size: contain;  }
 
 /* Banner */
-.banner { padding: 130px 0 150px; }
-.adv6-holder { padding: 13px 0 0; font-size: 13px; }
+.banner { padding: 25px 0 10%; }
+.adv6-holder { padding: 13px 30px 50px; font-size: 13px; background: #fff; border-radius: 4px; box-shadow: 0 16px 40px rgba(0,0,0,.12); }
 .searchForm .form-group { width: 100%; }
-.searchForm .btn { text-transform: uppercase;
-    line-height: 1em;
-    font-weight: 600;
-    letter-spacing: .5px;font-size: 13px;padding: 11px 26px 12px; 
-}
-.searchForm .form-control { 
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 12px; height: calc(2em + .75rem + 2px); 
-}
+.searchForm .btn { text-transform: uppercase; line-height: 1em; font-weight: 600; letter-spacing: .5px; font-size: 13px; padding: 11px 26px 12px; }
+.searchForm .form-control { overflow: hidden; white-space: nowrap; font-size: 12px; height: calc(2em + .75rem + 2px); }
 
 /* Property for Sale */
 .propsale { background: rgb(246, 246, 246); padding: 40px 0; margin-top: 15px; }
 .salelist { list-style-type: none; padding: 0; padding-left: 22px; }
 .salelist li { display: inline-block; }
+.propsale .card .img-wrap  { overflow: hidden; cursor: pointer; position: relative; }
+.propsale .card .img-wrap img { transition: all 0.3s ease; }
+.propsale .card:hover .img-wrap img { transform: scale(1.2); } 
 .propsale .card-body .btn { font-size: 12px; border: 1px solid #eee; background: #fff; padding: .3rem .55rem; }
 .propsale .card-body .svg-inline--fa { opacity: .4; color: #111; }
 .propsale .card-body .fa-heart { margin-right: 6px; }
 .propsale .card-body .btn:hover .svg-inline--fa  { color: #1ca8dd; opacity: 1; }
 .propsale .cardminbody { min-height: 225px; }
-.propionfos {
-    background-image: url('../img/unit.png');
-    font-size: 14px;
-    line-height: 30px;
-    background-repeat: no-repeat;
-    margin-right: 5px;
-    padding-left: 20px;
-    font-size: 13px;
-}
-.infosize { 
-    background-position: -127px 0; margin-right: 5px; padding-left: 20px;
-}
-.inforoom {
-    background-position: 0 -1px; margin-right: 10px; padding-left: 23px;
-}
-.infobath {
-    background-position: -63px -1px; margin-right: 10px; padding-left: 18px;
-}
+.propionfos { background-image: url('../img/unit.png'); font-size: 14px; line-height: 30px; background-repeat: no-repeat; margin-right: 5px; padding-left: 20px; font-size: 13px; }
+.infosize { background-position: -127px 0; margin-right: 5px; padding-left: 20px; }
+.inforoom { background-position: 0 -1px; margin-right: 10px; padding-left: 23px; }
+.infobath { background-position: -63px -1px; margin-right: 10px; padding-left: 18px; }
+.property_media { color: #fff; position: absolute; bottom: 8px; right: 20px; z-index: 9; opacity: .9; }
+.property_location_image { color: #fff; position: absolute; bottom: 8px; left: 20px; z-index: 9; opacity: .9; }
+.property_location_image a { color: #fff; }
+.property_marker { background-image: url('../img/unit.png'); background-repeat: no-repeat; background-position: 0 -19px; margin-right: 0; padding-left: 15px; }
 
+/* Explore Property */
+.explorepropty .fa-globe-asia { margin-right: 12px; font-size: 13px; margin-left: -7px; }
+.explorepropty .vc_sep_holder .vc_sep_line { width: 50%; margin: 20px auto 30px; }
 
+/* Property Search Guide */
+.searchGuides .vc_sep_holder .vc_sep_line { width: 50%; margin: -5px auto 15px; }
+.citycol { position: relative; }
+.cityname { position: absolute; left: 0; top: 50%; text-align: center; width: 100%; color: #fff; text-shadow: 0 0 10px #272727; font-size: 1.6em!important; font-family: "Raleway"!important;font-weight: 500!important; }
 
-
-
-
+/* Foo */
+.foo { background-color: #f2f2f2; padding: 50px 0 0; }
+.foo-logo { max-width: 135px; }
+.foolist { width: 33%; list-style-type: none; padding: 0; float: left; }
+.foolist h6 { font-family: "Raleway"; font-size: 14px; color: #1a1a1a; margin-bottom: 13px; }
+.foolist li { line-height: 22px; font-size: 13px; font-weight: 300; padding: 3px 0; }
+.foolist li a { color: #1a1a1a }
+.foolist li a:hover { color: #85b1c8!important; }
+.copyright { font-size: 12px; background: #fff; }
 
 
 
 /* Bootstrap Override */
 .btn { border-radius: 0; }
 .form-control { border-radius: 2px; }
-.btn-dark {
-    color: #fff;
-    background-color: #202020!important;
-    border-color: #202020!important;
-}
-h1, h2 {font-family: "Raleway";color: #3a4659;font-weight: normal;}
+.btn-dark { color: #fff; background-color: #202020!important; border-color: #202020!important; }
+.btn-white { color: #000; background-color: #fff!important; border-color: #202020!important; padding: .5rem 2.5rem; }
 .open-sans { font-family: 'Open Sans'; }
-
+h1, h2 {font-family: "Raleway";color: #3a4659;font-weight: normal;}
+a { color: #1a1a1a; }
+a:hover { text-decoration: none; color: #85b1c8; }
+.text-normal { font-weight: normal !important; }
+.vc_sep_holder .vc_sep_line { height: 1px; border-top: 1px solid #ebebeb; display: block; position: relative; top: 1px; width: 100%; }
+.vc_sep_color_grey .vc_sep_line { border-color: #ebebeb; }
+.font13 { font-size: 13px !important; }
+.font14 { font-size: 14px !important; }
+.font15 { font-size: 15px !important; }
+.font16 { font-size: 16px !important; }
+.anchrblue { color: #347da4; }
+.anchrblue:hover { color: #000; text-decoration: none; }
+.narrowpadd .citycol { padding-right: 5px; padding-left: 5px; }
+.cogs { display: none; cursor: pointer; }
+.headxs, .adv6-holderxs { display: none; }
 
 
 
 /* Media Queries */
-@media only screen and (max-width: 1599px) and (min-width: 1100px)
-{
+@media only screen and (max-width: 1599px) and (min-width: 1100px) {
     .adv6-holder {
-        width: 550px!important;
-        min-height: 370px;
-        margin-left: 15px;
+        padding-bottom: 5px;
     }
 }
-@media only screen and (min-width: 992px)
-{
-    .adv6-holder {
-        background: #fff!important;
-        border-radius: 4px!important;
-        padding-left: 28px!important;
-        padding-right: 28px!important;
-        padding-top: 32px!important;
-        box-shadow: 0 16px 40px rgba(0,0,0,.12)!important;
-    }
+@media only screen and (max-width: 1200px) {
+    .navbar-expand-lg .navbar-nav .nav-link { font-size: 11px; }
+    .adv6-holder > h4 { font-size: 20px; }
+    .propsale h2 { white-space: nowrap; }
+}
+@media only screen and (max-width: 1100px) {
+    .navbar-expand-lg .navbar-nav .nav-link { padding-left: 15px; padding-right: 15px; }
+}
+@media only screen and (max-width: 992px) {
+    .header { background: #fff; min-height: 0; padding: 0; }
+    .header .navbar { position: relative; top:0; left: 0; right: 0; }
+    .navbar-expand-lg .navbar-nav .nav-link { color: #000; }
+    .navbar-brand { background: url('../img/SUNUTI-Black-logo.png') no-repeat center top; width: 125px; height: 30px; background-size: contain; position: absolute; left: 50%; margin-left: -65px; top: 8px; }
+    .navbar-light .navbar-toggler { border: 0; color: #333; outline: none !important }
+    .cogs { display: inline-block; position: absolute; right: 12px; top: 12px; }
+    .adv6-holder { padding-bottom: 5px; display: none; }
+    .banner { min-height: 300px; position: relative; }
+    .wrapper {  background-position: center 45px; background-size: 100% 300px; }
+    .propsale .col-xs-12 { margin-bottom: 25px; }
+    .navbar-collapse {    position: absolute;
+        background: #fff;
+        width: 100%;
+        top: 45px;
+        left: 0; border-bottom: 1px solid #eee; }
+    
+}
+
+@media (max-width: 576px) {
+    .container { max-width: 100%; }
+    .narrowpadd .citycol { margin-bottom: 10px; overflow: hidden; }
+    .narrowpadd .citycol .img-holder { max-height: 250px; }
+    .narrowpadd .citycol .img-holder > img { max-height: 250px; width: 100%; }
+    .headxs { display: block; color: #fff; position: absolute; top: 60%; width: 100%; text-align: center; }
+    .banner { min-height: 200px; }
+    .wrapper { background-size: 100% 200px; }
+    .adv6-holderxs { display: block; }
+    .propsale h2 { white-space: normal; }
+    .propsale .cardminbody { min-height: 0; }
+    .copyright .text-right { text-align: left!important; }
 }
