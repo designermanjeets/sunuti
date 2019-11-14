@@ -19,6 +19,9 @@
         type='text/css' media='all' />
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|' type='text/css'
         media='all' />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="styles/bootnavbar.css">
+
     <link rel="stylesheet" href="styles/app.css">
     <title>:: Sunuti ::</title>
 </head>
@@ -27,7 +30,7 @@
     <section class="wrapper">
         <!-- Header -->
         <header class="header">
-            <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="main_navbar">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +50,39 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Holiday Rental</a>
                         </li>
-                        <li class="nav-item has-sub">
-                            <a class="nav-link" href="#">Guides</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Guides</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li></li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li class="nav-item dropdown">
+                                      <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                                          aria-haspopup="true" aria-expanded="false">
+                                        Dropdown
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li></li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li class="nav-item dropdown">
+                                          <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                                              aria-haspopup="true" aria-expanded="false">
+                                            Dropdown
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <div class="dropdown-divider"></div>
+                                            <li></li><a class="dropdown-item" href="#">Something else here</a></li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                    
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">FAQ</a>
@@ -63,7 +97,7 @@
                             <a class="nav-link" href="#"><img src="img/es.png" alt=""></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">SIGN IN&nbsp;<i class="far fa-user"></i></a>
+                            <a data-toggle="modal" data-target="#exampleModal" class="nav-link" href="#">SIGN IN&nbsp;<i class="far fa-user"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -367,15 +401,128 @@
         </section>
     </footer>
     <!-- ./Footer -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!-- Modal -->
+                <div class="modal-content no-bg"> <!-- this is the entire modal form, including the background -->
+                    <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+                        <ul class="cd-switcher">
+                            <li><a id="signin" href="#" class="selected">Sign in</a></li>
+                            <li><a id="signup" href="#">Registration</a></li>
+                        </ul>
+            
+                        <div id="cd-login" class="show"> <!-- log in form -->
+                            <form class="cd-form">
+                                <p class="fieldset">
+                                    <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                                    <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                                    <span class="cd-error-message">Error message here!</span>
+                                </p>
+            
+                                <p class="fieldset">
+                                    <label class="image-replace cd-password" for="signin-password">Password</label>
+                                    <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+                                    <a href="#0" class="hide-password">Show</a>
+                                    <span class="cd-error-message">Error message here!</span>
+                                </p>
+            
+                                <p class="fieldset">
+                                    <input type="checkbox" id="remember-me" checked>
+                                    <label for="remember-me">Remember me</label>
+                                </p>
+            
+                                <p class="fieldset">
+                                    <input class="full-width btn btn-dark" type="submit" value="Login">
+                                </p>
+                            </form>
+                            
+                            <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+                            <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                        </div> <!-- cd-login -->
+            
+                        <div id="cd-signup" class="hide"> <!-- sign up form -->
+                            <h4 class="text-center">Create an account</h4>
+                            <form class="cd-form">
+                                <p class="fieldset firstname">
+                                    <label class="image-replace cd-username" for="signup-username1">First Name*</label>
+                                    <input class="full-width has-padding has-border" id="signup-username1" type="text" placeholder="First Name*">
+                                    <span class="cd-error-message">Error message here!</span>
+                                </p>
+
+                                <p class="fieldset lastname">
+                                    <label class="image-replace cd-username" for="signup-username2">Last Name*</label>
+                                    <input class="full-width has-padding has-border" id="signup-username2" type="text" placeholder="Last Name*">
+                                    <span class="cd-error-message">Error message here!</span>
+                                </p>
+                                
+                                <p class="fieldset">
+                                    <label class="image-replace cd-username" for="signup-username3">Phone No*</label>
+                                    <input class="full-width has-padding has-border" id="signup-username3" type="text" placeholder="Phone No*">
+                                    <span class="cd-error-message">Error message here!</span>
+                                </p>
+            
+                                <p class="fieldset">
+                                    <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                                    <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+                                    <span class="cd-error-message">Error message here!</span>
+                                </p>
+            
+                                <p class="fieldset mb-1">
+                                    <input type="checkbox" id="accept-terms">
+                                    <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                                </p>
+            
+                                <p class="fieldset mt-0">
+                                    <img src="img/captcha.png" alt="" class="img-fluid">
+                                </p>
+            
+                                <p class="fieldset">
+                                    <input class="full-width has-padding btn btn-dark" type="submit" value="SIGN UP">
+                                </p>
+                            </form>
+            
+                            <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                        </div> <!-- cd-signup -->
+            
+                        <div id="cd-reset-password" style="display:none"> <!-- reset password form -->
+                            <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+            
+                            <form class="cd-form">
+                                <p class="fieldset">
+                                    <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                                    <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+                                    <span class="cd-error-message">Error message here!</span>
+                                </p>
+            
+                                <p class="fieldset">
+                                    <input class="full-width has-padding" type="submit" value="Reset password">
+                                </p>
+                            </form>
+            
+                            <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+                        </div> <!-- cd-reset-password -->
+                        <a href="#0" class="cd-close-form">Close</a>
+                    </div> <!-- cd-user-modal-container -->
+                </div> <!-- cd-user-modal -->
+
+        </div>
+    </div>
+
+    <!-- ./Modal -->
     <!-- End HTML -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="scripts/jquery-3.3.1.slim.min.js"></script>
     <script src="scripts/popper.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/bootnavbar.js" ></script>
+
     <script defer src="fonts/fa/js/all.min.js"></script>
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
+            $('#main_navbar').bootnavbar();
+
 
             $(window).scroll(function(){
                 if($(window).width() > 992) {
@@ -385,6 +532,44 @@
                     else sticky.removeClass('header-sticky');
                 }   
             });
+
+            $(document).on("click",".cd-close-form",function() {
+                $('#exampleModal').modal('hide')
+            });
+
+            $(document).on("click","#signin",function() {
+                $('#cd-login').addClass('show').removeClass('hide');
+                $('#cd-signup').removeClass('show').addClass('hide');
+                $('.cd-switcher a').removeClass('selected');
+                $(this).addClass('selected');
+            });
+
+            $(document).on("click","#signup",function() {
+                $('#cd-signup').addClass('show').removeClass('hide');
+                $('#cd-login').removeClass('show').addClass('hide');
+                $('.cd-switcher a').removeClass('selected');
+                $(this).addClass('selected');
+            });
+
+            // ------------------------------------------------------- //
+            // Multi Level dropdowns
+            // ------------------------------------------------------ //
+            $("ul.dropdown-menu [data-toggle='dropdown']").on("mouseover", function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                $(this).siblings().toggleClass("show");
+
+
+                if (!$(this).next().hasClass('show')) {
+                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                }
+                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                    $('.dropdown-submenu .show').removeClass("show");
+                });
+
+            });
+
         });
     </script>
     <!--load all styles -->
