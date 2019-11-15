@@ -447,7 +447,7 @@
                                 </p>
                             </form>
                             
-                            <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+                            <p class="cd-form-bottom-message"><a id="forgotPwd" href="#0">Forgot your password?</a></p>
                             <!-- <a href="#0" class="cd-close-form">Close</a> -->
                         </div> <!-- cd-login -->
             
@@ -495,8 +495,8 @@
                             <!-- <a href="#0" class="cd-close-form">Close</a> -->
                         </div> <!-- cd-signup -->
             
-                        <div id="cd-reset-password" style="display:none"> <!-- reset password form -->
-                            <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+                        <div id="cd-reset-password" class="hide"> <!-- reset password form -->
+                            <h4 class="cd-form-message lostpwdmsg text-normal">Lost your password? Please enter your email address. You will receive mail with link to set new password.</h4>
             
                             <form class="cd-form">
                                 <p class="fieldset">
@@ -506,11 +506,11 @@
                                 </p>
             
                                 <p class="fieldset">
-                                    <input class="full-width has-padding" type="submit" value="Reset password">
+                                    <input class="full-width has-padding btn btn-dark text-normal" type="submit" value="RESET PASSWORD">
                                 </p>
                             </form>
             
-                            <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+                            <p class="cd-form-bottom-message"><a id="backtologin" href="#0">Back to log-in</a></p>
                         </div> <!-- cd-reset-password -->
                         <a href="#0" class="cd-close-form">Close</a>
                     </div> <!-- cd-user-modal-container -->
@@ -547,11 +547,12 @@
                 $('#signupModal').modal('hide')
             });
 
-            $(document).on("click","#signin",function() {
+            $(document).on("click","#signin, #backtologin",function() {
+                var _this = $("#signin");
                 $('#cd-login').addClass('show').removeClass('hide');
-                $('#cd-signup').removeClass('show').addClass('hide');
+                $('#cd-signup, #cd-reset-password').removeClass('show').addClass('hide');
                 $('.cd-switcher a').removeClass('selected');
-                $(this).addClass('selected');
+                _this.addClass('selected');
             });
 
             $(document).on("click","#signup",function() {
@@ -559,6 +560,11 @@
                 $('#cd-login').removeClass('show').addClass('hide');
                 $('.cd-switcher a').removeClass('selected');
                 $(this).addClass('selected');
+            });
+
+            $(document).on("click","#forgotPwd",function() {
+                $('#cd-login, #cd-signup').removeClass('show').addClass('hide');
+                $('#cd-reset-password').addClass('show').removeClass('hide');
             });
 
             // ------------------------------------------------------- //

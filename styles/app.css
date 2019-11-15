@@ -474,6 +474,12 @@ xsigin/signup popup
   
   .cd-form .firstname, .cd-form .lastname { float: left; width: 48%; margin-top: 0; }
   .cd-form .lastname { float: right; }
+  .lostpwdmsg { font-size: 17px;
+    line-height: 1.4;
+    text-align: left;
+    margin: 24px 0 0 27px;
+    border-left: 4px solid #6d6d6d;
+    padding: 10px 10px 10px 10px; }
 
   /* Dropdown */
   .dropdown-submenu {
