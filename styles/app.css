@@ -10,14 +10,14 @@ header {
     background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
-    padding: 10px 45px; min-height: 90px;
+    padding: 10px 45px; min-height: 90px; transition: all 0.3s ease;
     }
-.header * {  transition: all 0.3s ease;  }
+/* .header * {  transition: all 0.3s ease;  } */
 .navbar-brand { background: url('../img/SUNUTI-White-logo.png') no-repeat center top; width: 150px; height: 36px; background-size: contain; }
 .navbar-expand-lg .navbar-nav .nav-link{ color: #fff; font-size: 14px; font-family: "Lato"; padding-left: 19px; padding-right: 19px; text-transform: uppercase; }
 .navbar-expand-lg .navbar-nav .nav-link:hover { color: #000; }
 .navbar-expand-lg.fixed-top { top: 15px; left: 28px; right: 45px; }
-.header-sticky { background: #fff; position: fixed; width: 100%; left: 0; top:0; height: 70px; z-index: 99; }
+.header-sticky { background: #fff; position: fixed; width: 100%; left: 0; top:0; height: 70px; min-height: 70px; z-index: 99; }
 .header-sticky .navbar-nav .nav-link { color: #000; }
 .header-sticky .navbar-expand-lg.fixed-top { top: 6px; }
 .header-sticky .navbar-brand { background: url('../img/SUNUTI-Black-logo.png') no-repeat center top; width: 150px; height: 36px; background-size: contain;  }
@@ -237,8 +237,8 @@ xsigin/signup popup
       margin: 4em auto;
     }
     .cd-user-modal-container .cd-switcher a {
-      height: 70px;
-      line-height: 70px;
+      height: 50px;
+      line-height: 50px;
       text-transform: uppercase;
     }
   }
@@ -396,13 +396,13 @@ xsigin/signup popup
     -moz-transition: opacity 0.2s 0, visibility 0 0;
     transition: opacity 0.2s 0, visibility 0 0;
   }
-  .cd-switcher { list-style-type: none; padding: 0 }
+  .cd-switcher { list-style-type: none; padding: 0; margin-bottom: 0; }
   @media only screen and (min-width: 600px) {
     .cd-form {
       padding: 2em;
     }
     .cd-form .fieldset {
-      margin: 2em 0;
+      margin: 1em 0;
     }
     .cd-form .fieldset:first-child {
       margin-top: 0;
@@ -414,7 +414,7 @@ xsigin/signup popup
       padding: 10px 20px 10px 20px;
     }
     .cd-form input[type=submit] {
-      padding: 16px 0;
+      padding: 10px 0;
     }
   }
   
@@ -494,3 +494,18 @@ xsigin/signup popup
     margin-left: 0px;
   }
   .nav-item.has-sub { position: relative; }
+  .header .nav-item .dropdown-menu { border: 1px solid #cccccc; font-size: 13px; background-color: #fff; transition: all .4s ease; padding: 0; border-radius: 0; border-bottom: 0; width: 220px; }
+  .header .nav-item .dropdown-menu .dropdown-item { -webkit-transition: padding .35s ease; -moz-transition: padding .35s ease; -o-transition: padding .35s ease; transition: padding .35s ease; -webkit-backface-visibility: hidden; border-bottom: 1px solid #cccccc;font-family: "Lato";color: #62748f; font-size: 13px; font-weight: 400; height: auto; line-height: 1.4em; padding: 13px 13px 13px 13px; text-transform: none; }
+  .header .nav-item .dropdown-menu > li a:hover,   .header .nav-item .dropdown-menu > li.show { background: #1ca8dd; color: #85b1c8; }
+  .header .nav-item .dropdown-menu .dropdown-toggle::after { float: right; margin-top: 6px; }
+
+  @media all and (max-width: 992px) {
+    .header .nav-item .dropdown-menu .dropdown-item, .header .nav-item .dropdown-menu { border: none; }
+    .header .nav-item .dropdown-menu .dropdown-item { padding: 5px 15px; }
+    .header .nav-item .dropdown-menu { margin-left: 15px;}
+    .header .nav-item .dropdown-menu .dropdown-toggle::after {
+        float: none;
+        margin-top: 4px;
+        transform: rotateZ(90deg);
+    }
+  }
