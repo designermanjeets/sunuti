@@ -505,6 +505,14 @@ xsigin/signup popup
   .header .nav-item .dropdown-menu > li a:hover,   .header .nav-item .dropdown-menu > li.show { background: #1ca8dd; color: #85b1c8; }
   .header .nav-item .dropdown-menu .dropdown-toggle::after { float: right; margin-top: 6px; }
 
+  #moreSearchOptions { position: relative; }
+  .moreSearchOptionsSec { position: absolute; left: -30px; top: 0; width: 880px; background-color: #fff; padding: 10px; padding-left: 40px; z-index: 9; box-shadow: 5px 5px 10px rgba(0, 0, 0, .2); display: none; transition: all 0.3s ease; }
+  .moreSearchOptionsSec label > span { vertical-align: text-bottom; }
+  #closeicon { position: absolute; right: 10px; top: 2px; z-index: 1; color: #8f9eb6; }
+  .cursorpoint { cursor: pointer; }
+  .moreSearchOptionsSec .custom-control { margin-bottom: 8px; }
+
+
   @media all and (max-width: 992px) {
     .header .nav-item .dropdown-menu .dropdown-item, .header .nav-item .dropdown-menu { border: none; }
     .header .nav-item .dropdown-menu .dropdown-item { padding: 5px 15px; }
@@ -514,4 +522,6 @@ xsigin/signup popup
         margin-top: 4px;
         transform: rotateZ(90deg);
     }
+    .moreSearchOptionsSec { height: 245px; overflow: scroll !important; width: calc(100% + 5px); overflow-x: hidden !important; position: relative; top: -30px;margin-bottom: -20px; padding-left: 15px; left: 0; }
+    .moreSearchOptionsSec > .row { width: 100%; }
   }
