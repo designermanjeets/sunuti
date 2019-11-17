@@ -515,10 +515,11 @@ xsigin/signup popup
   .searchFormDropDown .dropdown-toggle { border: 1px solid #dde4e9 !important; background: #fff !important; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; color: #495057 !important; box-shadow: none !important; font-size: 12px; width: 100%; text-align: left; padding-left: 17px; text-transform: none; font-weight: normal; }
   :root .searchFormDropDown.show .dropdown-toggle, 
   :root .searchFormDropDown.show .dropdown-toggle:focus { border-color: #1ca8dd !important; box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6) !important; }
-  .searchFormDropDown .dropdown-toggle::after { position: absolute; right: 7px; top: 18px; }
+  .searchFormDropDown .dropdown-toggle::after { position: absolute; right: 7px; top: 18px; display: none; }
   .searchFormDropDown .dropdown-menu { width: 100%; background-color: #fdfdfd; border-radius: 0;border-color: #f0f0f0;box-shadow: 0 6px 12px rgba(0,0,0,.175); padding: 0; max-height: 250px; overflow: auto;  }
   .searchFormDropDown .dropdown-menu .dropdown-item { padding: 13px; line-height: 1.1em; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
   .searchFormDropDown .dropdown-menu .dropdown-item:hover { background-color: #347da4; color: #f0f0f0; }
+  .searchFormDropDown .dropdown-toggle .fa-chevron-down { position: absolute; right: 10px; top: 14px; color: #999; font-size: 9px; }
 
 
   @media all and (max-width: 992px) {
