@@ -16,6 +16,7 @@ header {
 .navbar-brand { background: url('../img/SUNUTI-White-logo.png') no-repeat center top; width: 150px; height: 36px; background-size: contain; }
 .navbar-expand-lg .navbar-nav .nav-link{ color: #fff; font-size: 14px; font-family: "Lato"; padding-left: 19px; padding-right: 19px; text-transform: uppercase; }
 .navbar-expand-lg .navbar-nav .nav-link:hover { color: #000; }
+.navbar-expand-lg .navbar-nav .nav-link:focus { color: #fff; }
 .navbar-expand-lg.fixed-top { top: 15px; left: 28px; right: 45px; }
 .header-sticky { background: #fff; position: fixed; width: 100%; left: 0; top:0; height: 70px; min-height: 70px; z-index: 99; }
 .header-sticky .navbar-nav .nav-link { color: #000; }
@@ -520,6 +521,7 @@ xsigin/signup popup
   .searchFormDropDown .dropdown-menu .dropdown-item { padding: 13px; line-height: 1.1em; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
   .searchFormDropDown .dropdown-menu .dropdown-item:hover { background-color: #347da4; color: #f0f0f0; }
   .searchFormDropDown .dropdown-toggle .fa-chevron-down { position: absolute; right: 10px; top: 14px; color: #999; font-size: 9px; }
+  .modal-backdrop.show { background: rgba(52,54,66,.9); transition: opacity .3s,visibility .3s;opacity: 1; }
 
 
   @media all and (max-width: 992px) {
