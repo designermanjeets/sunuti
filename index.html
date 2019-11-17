@@ -1240,6 +1240,9 @@
             // ------------------------------------------------------- //
             // Multi Level dropdowns
             // ------------------------------------------------------ //
+            $(".nav-link.dropdown-toggle").on("mouseover", function(event) {
+                $('.dropdown-item.dropdown-toggle.active').removeClass("active");
+            });
             $("ul.dropdown-menu [data-toggle='dropdown']").on("mouseover", function(event) {
                 event.preventDefault();
                 event.stopPropagation();
