@@ -1244,7 +1244,9 @@
                 event.preventDefault();
                 event.stopPropagation();
 
+                $('.dropdown-item.dropdown-toggle.active').removeClass("active");
                 $(this).siblings().toggleClass("show");
+                $(this).toggleClass("active");
 
 
                 if (!$(this).next().hasClass('show')) {
